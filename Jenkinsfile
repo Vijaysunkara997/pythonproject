@@ -4,9 +4,15 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                bat 'python -m pip install --upgrade pip'
-                bat 'pip install -r requirements.txt'
-                bat 'playwright install'
+              bat '"C:\\Users\\DELL\\AppData\\Local\\Python\\bin\\python.exe" --version'
+
+bat '"C:\\Users\\DELL\\AppData\\Local\\Python\\bin\\python.exe" -m pip install --upgrade pip'
+
+bat '"C:\\Users\\DELL\\AppData\\Local\\Python\\bin\\python.exe" -m pip install -r requirements.txt'
+
+bat '"C:\\Users\\DELL\\AppData\\Local\\Python\\bin\\python.exe" -m playwright install chromium'
+
+bat '"C:\\Users\\DELL\\AppData\\Local\\Python\\bin\\python.exe" -m pytest -v -s'
             }
         }
 
