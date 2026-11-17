@@ -18,7 +18,7 @@ bat '"C:\\Users\\DELL\\AppData\\Local\\Python\\bin\\python.exe" -m pytest -v -s'
 
         stage('Run Tests') {
             steps {
-                bat 'pytest -v -s'
+                bat '"C:\\Users\\DELL\\AppData\\Local\\Python\\bin\\python.exe" -m pytest -v -s'
             }
         }
     }
