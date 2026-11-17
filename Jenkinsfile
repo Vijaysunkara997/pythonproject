@@ -2,15 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('Install') {
+        stage('Install Dependencies') {
             steps {
-                bat 'npm ci'
+                bat 'python -m pip install --upgrade pip'
+                bat 'pip install -r requirements.txt'
+                bat 'playwright install'
             }
         }
 
-        stage('Test') {
+        stage('Run Tests') {
             steps {
-                bat 'npx playwright test'
+                bat 'pytest -v -s'
             }
         }
     }
