@@ -1,4 +1,4 @@
-from Pages.login_page import LoginPage
+from Test.Pages.login_page import LoginPage
 
 
 class TestLogin:
